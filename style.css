@@ -1,0 +1,919 @@
+
+/* =================================
+   GOOGLE FONTS
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+
+/* =================================
+   1. COLOR PALETTE & GENERAL STYLE
+================================= */
+
+:root {
+    --orange: #D97745;
+    --orange-light: #F2B58E;
+    --blue: #527C9B;
+    --blue-dark: #395C73;
+    --green: #829477;
+    --brown: #795548;
+    --brown-dark: #493B32;
+    --cream: #F5F1E9;
+    --beige: #E6E0D5;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    background-color: var(--cream);
+    color: var(--brown-dark);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Outfit for headings and logo */
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =================================
+   2. NAVIGATION BAR
+================================= */
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--beige);
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(73, 59, 50, 0.05);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--blue-dark);
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--brown-dark);
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 470px;
+    margin: 35px auto 80px;
+    padding: 70px 65px 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    color: var(--white);
+    background: linear-gradient(
+        120deg,
+        var(--blue-dark),
+        var(--blue)
+    );
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(57, 92, 115, 0.18);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.eyebrow {
+    margin: 0 0 15px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--orange);
+}
+
+.hero .eyebrow {
+    color: var(--orange-light);
+}
+
+.hero h1 {
+    margin: 10px 0;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--orange-light);
+}
+
+.hero-tagline {
+    margin: 15px 0;
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--cream);
+}
+
+.hero-description {
+    max-width: 420px;
+    margin-bottom: 30px;
+    color: #F0EDE7;
+    font-size: 0.95rem;
+}
+
+.hero-button {
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+    padding: 13px 22px;
+    color: var(--brown-dark);
+    background-color: var(--orange-light);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--white);
+    transform: translateY(-4px);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 17px 35px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #E6E0D5;
+    font-size: 0.62rem;
+    letter-spacing: 1.5px;
+}
+
+
+/* Hero decorative artwork */
+
+.hero-art {
+    position: relative;
+    width: 320px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.art-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 210px;
+    height: 210px;
+    top: 30px;
+    left: 50px;
+    background-color: var(--orange);
+}
+
+.circle-two {
+    width: 155px;
+    height: 155px;
+    top: 0;
+    right: 5px;
+    border: 3px solid var(--orange-light);
+    background-color: transparent;
+}
+
+.circle-three {
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--green);
+}
+
+.art-star {
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    z-index: 2;
+    font-size: 6rem;
+    color: var(--cream);
+}
+
+.art-text {
+    position: absolute;
+    right: 5px;
+    bottom: 35px;
+    z-index: 3;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: right;
+    color: var(--white);
+}
+
+.art-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    color: var(--orange-light);
+}
+
+
+/* =================================
+   4. SHARED SECTION STYLES
+================================= */
+
+.section-space {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    color: var(--blue-dark);
+}
+
+.section-heading h2 span {
+    color: var(--orange);
+}
+
+.section-description {
+    margin-top: 12px;
+    color: var(--brown);
+    font-size: 0.9rem;
+}
+
+
+/* =================================
+   5. ABOUT ME SECTION
+================================= */
+
+.about-container {
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.profile-card {
+    width: 36%;
+    min-height: 320px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--green);
+    border-radius: 20px;
+    transform: rotate(-1deg);
+    transition: 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.photo-frame {
+    flex: 1;
+    min-height: 240px;
+    overflow: hidden;
+    border-radius: 13px;
+    background-color: var(--beige);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    display: block;
+    object-fit: cover;
+}
+
+.profile-card-footer {
+    padding: 12px 5px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.profile-card-footer span:last-child {
+    font-size: 1.2rem;
+    color: var(--orange-light);
+}
+
+.about-content {
+    flex: 1;
+    padding: 35px 40px;
+    background-color: var(--white);
+    border: 1px solid var(--beige);
+    border-left: 6px solid var(--orange);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(73, 59, 50, 0.05);
+}
+
+.about-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--green);
+}
+
+.about-content h3 {
+    margin: 10px 0;
+    font-size: 2rem;
+    color: var(--blue-dark);
+}
+
+.about-content h3 span {
+    color: var(--orange);
+}
+
+.about-content p {
+    font-size: 0.9rem;
+    color: var(--brown-dark);
+}
+
+.about-divider {
+    height: 1px;
+    margin: 25px 0 15px;
+    background-color: var(--beige);
+}
+
+.about-details {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-details div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--brown);
+}
+
+.detail-number {
+    color: var(--orange);
+    font-size: 1rem;
+}
+
+
+/* =================================
+   6. THINGS I LOVE SECTION
+================================= */
+
+.love-section {
+    width: 100%;
+    margin-top: 50px;
+    padding: 75px 7.5%;
+    background-color: var(--beige);
+}
+
+.love-section .section-heading {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+}
+
+.interest-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.interest-card {
+    position: relative;
+    min-height: 230px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 18px;
+    transition: 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(73, 59, 50, 0.12);
+}
+
+.music {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.movies {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.art {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.creativity {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.interest-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.interest-icon {
+    font-size: 1.8rem;
+}
+
+.interest-card h3 {
+    margin: 25px 0 0;
+    font-size: 1.5rem;
+}
+
+.interest-card p {
+    margin: 5px 0 20px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.card-arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    font-size: 1.1rem;
+}
+
+
+/* =================================
+   7. QUOTE STRIP
+================================= */
+
+.quote-strip {
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: var(--orange-light);
+    color: var(--brown-dark);
+    text-align: center;
+}
+
+.quote-strip p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.quote-strip span {
+    font-size: 1.3rem;
+    color: var(--brown);
+}
+
+
+/* =================================
+   8. PASSION PROJECTS
+================================= */
+
+.projects-section {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 85px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.project-card {
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--beige);
+    border-radius: 18px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(73, 59, 50, 0.12);
+}
+
+.project-top {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--brown);
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* Decorative project visual blocks */
+
+.project-visual {
+    height: 180px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+}
+
+.visual-orange {
+    background-color: #F2D2BE;
+    color: var(--orange);
+}
+
+.visual-green {
+    background-color: #D9E0D2;
+    color: var(--green);
+}
+
+.visual-blue {
+    background-color: #D6E2E9;
+    color: var(--blue);
+}
+
+.project-visual span {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.project-visual small {
+    font-size: 0.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-info {
+    padding: 15px 22px 25px;
+}
+
+.project-info h3 {
+    margin: 5px 0;
+    font-size: 1.25rem;
+    color: var(--blue-dark);
+}
+
+.project-info p {
+    min-height: 75px;
+    font-size: 0.82rem;
+    color: var(--brown);
+}
+
+.project-info a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--orange);
+    color: var(--brown-dark);
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.project-info a:hover {
+    color: var(--orange);
+    gap: 16px;
+}
+
+
+/* =================================
+   9. CONTACT SECTION
+================================= */
+
+.contact-section {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 75px 30px;
+    overflow: hidden;
+    background-color: var(--brown-dark);
+    border-radius: 25px;
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-section .eyebrow {
+    color: var(--orange-light);
+}
+
+.contact-section h2 {
+    margin: 10px 0;
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.contact-section h2 span {
+    color: var(--orange-light);
+}
+
+.contact-section > p:not(.eyebrow) {
+    color: #E6E0D5;
+    font-size: 0.9rem;
+}
+
+.contact-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact-links a {
+    padding: 12px 23px;
+    border: 1px solid var(--orange-light);
+    border-radius: 30px;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+    background-color: var(--orange-light);
+    color: var(--brown-dark);
+}
+
+.contact-decoration {
+    position: absolute;
+    top: -65px;
+    right: 35px;
+    font-size: 12rem;
+    color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =================================
+   10. FOOTER
+================================= */
+
+footer {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid var(--beige);
+    color: var(--brown);
+    font-size: 0.75rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer span {
+    color: var(--orange);
+}
+
+
+/* =================================
+   11. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 92%;
+        padding: 12px 18px;
+        flex-wrap: wrap;
+        gap: 12px;
+        border-radius: 18px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 0.68rem;
+    }
+
+    .hero {
+        width: 92%;
+        min-height: 0;
+        margin-top: 20px;
+        padding: 45px 25px 75px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+        letter-spacing: -2px;
+    }
+
+    .hero-tagline {
+        font-size: 1.5rem;
+    }
+
+    .hero-art {
+        width: 250px;
+        height: 220px;
+        align-self: center;
+        transform: scale(0.85);
+        transform-origin: center;
+    }
+
+    .hero-bottom {
+        padding: 12px 15px;
+        gap: 8px;
+        font-size: 0.48rem;
+        letter-spacing: 0.5px;
+    }
+
+    .section-space {
+        width: 88%;
+        padding: 35px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .profile-card {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .photo-frame,
+    .photo-frame img {
+        min-height: 260px;
+    }
+
+    .about-content {
+        padding: 25px;
+    }
+
+    .about-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .love-section {
+        padding: 55px 6%;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .interest-card {
+        min-height: 205px;
+        padding: 15px;
+    }
+
+    .interest-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .interest-card p {
+        font-size: 0.72rem;
+    }
+
+    .quote-strip {
+        gap: 10px;
+        padding: 20px 12px;
+    }
+
+    .quote-strip p {
+        font-size: 0.8rem;
+    }
+
+    .projects-section {
+        width: 88%;
+        padding: 60px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-info p {
+        min-height: 0;
+    }
+
+    .contact-section {
+        width: 92%;
+        padding: 60px 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-links a {
+        width: 80%;
+    }
+
+    footer {
+        width: 88%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
